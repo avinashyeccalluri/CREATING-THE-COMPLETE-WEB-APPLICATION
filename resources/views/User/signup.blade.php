@@ -8,11 +8,16 @@
 </head>
 <body>
 <h1>welcome to User login page</h1>
-<form action="" method="post">
-  Name: <input type="text" name="signupusername" id=""> <br> <br>
-  Email: <input type="text" name="signupemail" id=""> <br> <br>
-  Password <input type="text" name="signuppassword" id=""> <br> <br>
+<form action="/user" method="post">
+  @csrf
+  
+  Name: <input type="text" name="name" id="" value={{ old('name') }}  > <br> <br>
+  Email: <input type="email" name="email" id="" value={{ old('email') }}> <br> <br>
+  Password <input type="password" name="password" id="" value={{ old('password') }}> <br> <br>
   <input type="submit" value="Signup">
-
+  @foreach($errors->all() as $a) 
+  <li>{{$a}}</li>
+  @endforeach
+</form>
 </body>
 </html>

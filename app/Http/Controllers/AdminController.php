@@ -12,4 +12,7 @@ class AdminController extends Controller
     public function signup(){
         return view ('Admin.signup');
     }
+    public function storesignup(){
+        return view ('Admin.index');
+    }
 }
