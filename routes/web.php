@@ -18,6 +18,9 @@ Route::get('/main','MainController@main');
 Route::get('/admin','AdminController@index');
 Route::get('/user','UserController@index');
 Route::post('/user','UserController@storesignup');
+Route::post('/user/authenticate','UserController@authenticate');
 Route::get('/user/signup','UserController@signup');
 Route::get('/admin/signup','AdminController@signup');
+Route::get('/user/authenticate/viewbooks','UserController@viewbooks');
+Route::get('/user/authenticate/purchasebooks','UserController@purchasebooks');
 
