@@ -23,4 +23,5 @@ Route::get('/user/signup','UserController@signup');
 Route::get('/admin/signup','AdminController@signup');
 Route::get('/user/authenticate/viewbooks','UserController@viewbooks');
 Route::get('/user/authenticate/purchasebooks','UserController@purchasebooks');
+Route::get('/user/logout','UserController@logout');
 
